@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    // Input & Output
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // ECMAScript / Module config
+    "target": "ES2020",
+    "module": "ES2020",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+
+    // Node type definitions
+    "lib": ["ES2020"],
+    "types": ["node"],
+
+    // Emit & Debug
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Strict checking
+    "strict": true,
+    "skipLibCheck": true,
+
+    // Make TS behave like native ESM
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"]
+}
