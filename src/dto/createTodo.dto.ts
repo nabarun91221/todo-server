@@ -1,5 +1,5 @@
 
-import { IsString, IsEnum, IsBoolean, IsDateString, IsArray, ArrayNotEmpty, IsOptional } from "class-validator";
+import { IsString, IsEnum, IsBoolean, IsDateString, IsArray, ArrayNotEmpty, IsOptional, IsMongoId } from "class-validator";
 
 export enum TodoPriority {
     LOW = "LOW",
@@ -9,7 +9,7 @@ export enum TodoPriority {
 
 export class CreateTodoDto {
 
-    @IsString()
+    @IsMongoId()
     section_id!: string;
 
     @IsString()
@@ -23,7 +23,7 @@ export class CreateTodoDto {
     todo_deadline!: string;
 
     @IsArray()
-    @ArrayNotEmpty()
+    // @ArrayNotEmpty()
     @IsString({ each: true })
     todo_links!: string[];
 
