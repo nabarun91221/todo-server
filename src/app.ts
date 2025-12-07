@@ -16,6 +16,7 @@ const App = express();
 App.use(express.json());
 App.use(cookieParser());
 
+
 const initializeTodoServer = async () => {
     try {
         await connectMongoose();
